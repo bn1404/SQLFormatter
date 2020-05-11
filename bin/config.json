@@ -1,0 +1,26 @@
+{
+	"select": {
+		"find": "(?mi)select\\s",
+		"replace": "SELECT "
+	},
+	"from": {
+		"find": "(?mi)\\sfrom\\s",
+		"replace": "\nFROM "
+	},
+	"where": {
+		"find": "(?mi)\\swhere\\s",
+		"replace": "\nWHERE "
+	},
+	"join": {
+		"find": "(?mi)(INNER|LEFT|RIGHT)(\\souter)?\\sjoin\\s",
+		"replace": "\n\t$0"
+	},
+	"groupby": {
+		"find": "(?mi)group\\sby",
+		"replace": "\nGROUP BY "
+	},
+	"comma": {
+		"find": "\\s*,\\s*",
+		"replace": ", "
+	}
+}
